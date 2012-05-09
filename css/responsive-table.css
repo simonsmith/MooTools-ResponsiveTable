@@ -6,6 +6,9 @@
 .enhanced .essential {
   display: table-cell;
 }
+.responsive-table-container {
+  overflow: hidden;
+}
 .display-list-item {
   margin-left: 15px;
 }

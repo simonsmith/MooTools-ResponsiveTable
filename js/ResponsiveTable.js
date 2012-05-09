@@ -46,10 +46,10 @@
             checkInputEvents: ['orientationchange', 'resize']
         },
 
-        /*
-            @param  {Element|String} table
-            @param {Object} options
-        */
+        /**
+         * @param {Element|String} table
+         * @param {Object} options
+         */
         initialize: function(table, options) {
 
             this.setOptions(options);
@@ -73,11 +73,11 @@
 
         },
 
-        /*
-            Checks a column's visibility and sets relevant state of the checkbox
-
-            @public
-        */
+        /**
+         * Checks a column's visibility and sets relevant state of the checkbox
+         *
+         * @public
+         */
         setInputState: function() {
 
             // Has to loop checboxes each time, so can be expensive to
@@ -94,11 +94,11 @@
 
         },
 
-        /*
-            Links a 'thead th' with it's column of 'td' elements
-
-            @protected
-        */
+        /**
+         * Links a 'thead th' with it's column of 'td' elements
+         *
+         * @protected
+         */
         associateColumns: function() {
 
             var table = this.table;
@@ -127,14 +127,14 @@
 
         }.protect(),
 
-        /*
-            Creates a list element containing a label and checkbox
-            Attaches change event and adds to the display menu
-
-            @param {Element} th
-            @param {Number} index
-            @protected
-        */
+        /**
+         * Creates a list element containing a label and checkbox
+         * Attaches change event and adds to the display menu
+         *
+         * @param {Element} th
+         * @param {Number} index
+         * @protected
+         */
         createColumnToggle: function(th, index) {
 
             if (th.hasClass(this.options.classes.persist)) return;
@@ -172,12 +172,12 @@
 
         }.protect(),
 
-        /*
-            Creates initial skeleton of the display menu
-
-            @returns {Element}
-            @protected
-        */
+        /**
+         * Creates initial skeleton of the display menu
+         *
+         * @returns {Element}
+         * @protected
+         */
         createDisplayMenu: function() {
 
             var self = this;
