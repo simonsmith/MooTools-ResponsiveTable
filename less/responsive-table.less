@@ -1,0 +1,74 @@
+@import '../Demo/less/mixins.less';
+
+.enhanced th,
+.enhanced td {
+    display: none;
+}
+
+.enhanced .essential,
+.enhanced .essential {
+    display: table-cell;
+}
+
+.display-list-item {
+    margin-left: 15px;
+}
+
+.display-menu {
+    > a {
+        float: right;
+        background-color: #eee;
+        padding: 5px;
+        width: 10em;
+        text-align: center;
+        .border-radius(5px 5px 0 0);
+    }
+
+    .display-list {
+        background-color: #eee;
+        padding: 0;
+        float: right;
+        clear: both;
+        width: 10em;
+        display: none;
+        list-style-type: none;
+        padding: 10px 0;
+    }
+
+    .display-list-item {
+        margin-bottom: 5px;
+    }
+
+    input {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .enhanced .optional,
+    .enhanced .optional {
+        display: table-cell;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .enhanced .optional,
+    .enhanced .optional {
+        display: table-cell;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .enhanced th,
+    .enhanced td {
+        display: table-cell;
+    }
+}
+
+.enhanced .col-visible {
+    display: table-cell;
+}
+
+.enhanced .col-hidden {
+    display: none;
+}

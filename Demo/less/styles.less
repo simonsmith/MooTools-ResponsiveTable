@@ -1,0 +1,40 @@
+@import 'reset.less';
+@import 'mixins.less';
+
+body {
+    font-size: .8em;
+}
+
+.container {
+    width: 85%;
+    margin: 50px auto 0;
+}
+
+table {
+    border: 1px solid #ddd;
+    width: 100%;
+    .border-radius(5px);
+    border-collapse: collapse;
+
+    thead {
+        background-color: #9D3D97;
+        color: #fff;
+
+        th {
+            padding: 5px;
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: #eee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        td {
+            text-align: center;
+            border-top: #fff;
+            padding: 8px;
+        }
+    }
+}
