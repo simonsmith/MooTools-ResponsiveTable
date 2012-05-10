@@ -28,7 +28,7 @@ new ResponsiveTable(table, options);
 * **displayMenu** - _(object)_ Options for the element that contains the display checkboxes
 	* **linkText** - _(string)_ Text used in the link _default_ `Display columns`
 	* **position** - _(string)_ Where the display menu is injected in relation to the container _default_ `top`
-* **checkInputEvents** - _(array)_ The state of the display menu checkboxes are checked against these events _default_ `['orientationchange', 'resize']`
+* **checkInputEvents** - _(array|string)_ The state of the display menu checkboxes are checked against these events _default_ `['orientationchange', 'resize']`
 
 ### Events
 - - -

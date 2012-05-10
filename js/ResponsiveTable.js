@@ -8,11 +8,12 @@
             http://filamentgroup.com/examples/rwd-table-patterns/
 
     authors:
-        Simon Smith
+        Simon Smith - http://blink-design.net
+        https://github.com/simonsmith/MooTools-ResponsiveTable
 
     license: MIT-style license.
 
-    version: 1.0
+    version: 1.1
 
     requires:
       - Core/Event
@@ -56,7 +57,6 @@
 
             this.table = document.getElement(table);
 
-            // Only do stuff with CSS if JS is enabled
             this.table.addClass(this.options.classes.enhanced);
             this.container = new Element('div.responsive-table-container').wraps(this.table);
 
@@ -66,10 +66,7 @@
             this.checkboxes = this.displayMenu.getElements('input');
 
             this.setInputState();
-
-            this.options.checkInputEvents.each(function(event) {
-                win.addEvent(event, this.setInputState.bind(this));
-            }, this);
+            this.attachCheckInputEvents();
 
         },
 
@@ -80,8 +77,6 @@
          */
         setInputState: function() {
 
-            // Has to loop checboxes each time, so can be expensive to
-            // run on resize.
             this.checkboxes.each(function(checkbox) {
                 var column = checkbox.retrieve('th');
                 var display = column.getStyle('display');
@@ -93,6 +88,25 @@
             this.fireEvent('checkInputState', [this.checkboxes]);
 
         },
+
+        /**
+         * Attaches 'setInputState' to events, e.g resize
+         *
+         * @protected
+         */
+        attachCheckInputEvents: function() {
+            
+            var events = this.options.checkInputEvents;
+            var boundFn = this.setInputState.bind(this);
+
+            // Allow single event to be set as a string
+            if (typeof events === 'string') events = [events];
+            
+            for (var i = 0, len = events.length; i < len; i++) {
+                win.addEvent(events[i], boundFn);
+            }
+            
+        }.protect(),
 
         /**
          * Links a 'thead th' with it's column of 'td' elements
