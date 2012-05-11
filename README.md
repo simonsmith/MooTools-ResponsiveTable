@@ -2,7 +2,7 @@
 
 Port of Filament Group's [Responsive Table jQuery plugin](http://filamentgroup.com/examples/rwd-table-patterns/). Allows a default set of columns to be shown at different screen sizes and enables user to toggle them with a display menu.
 
-jsfiddle demo: [http://jsfiddle.net/Blink/kZUg8/](http://jsfiddle.net/Blink/kZUg8/)
+jsfiddle demo: http://jsfiddle.net/Blink/kZUg8/
 
 ## Usage
 
