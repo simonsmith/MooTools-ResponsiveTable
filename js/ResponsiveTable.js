@@ -25,11 +25,15 @@
       - ResponsiveTable
 */
 
-!function(win) {
+(function (name, global, definition) {
+	if (typeof module !== 'undefined') module.exports = definition(name, global);
+	else if (typeof define === 'function' && typeof define.amd  === 'object') define(definition);
+	else global[name] = definition(name, global);
+})('ResponsiveTable', this, function (name, global) {
 
     'use strict';
 
-    win.ResponsiveTable = new Class({
+    return new Class({
 
         Implements: [Options, Events],
 
@@ -103,7 +107,7 @@
             if (typeof events === 'string') events = [events];
             
             for (var i = 0, len = events.length; i < len; i++) {
-                win.addEvent(events[i], boundFn);
+                global.addEvent(events[i], boundFn);
             }
             
         }.protect(),
@@ -216,4 +220,4 @@
 
     });
 
-}(window);
+});
